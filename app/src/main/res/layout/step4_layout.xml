@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="ui.Step4Fragment">
+
+    <!-- Header -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EDFAFE"
+        android:orientation="horizontal"
+        android:padding="23dp"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#238EED"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mot de passe oublié"
+            android:textColor="#238EED"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt1step4"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/header_layout"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- Password EditText -->
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/password_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginEnd="16dp"
+        android:hint="mot de passe"
+        android:inputType="textPassword" />
+
+    <!-- Confirm Password EditText -->
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/confirm_password_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password_edit_text"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginEnd="16dp"
+        android:hint="Confirmation mot du passe"
+        android:inputType="textPassword" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_28sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_blue_theme"
+        android:textColor="@color/white"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_500sdp"
+        android:text="Suivant" />
+
+</RelativeLayout>

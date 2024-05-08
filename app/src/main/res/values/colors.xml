@@ -2,4 +2,23 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="background">#FAFDFF</color>
+    <color name="primaryDark1">#36445D</color>
+    <color name="primaryDark">#232941</color>
+    <color name="primary">#004F85</color>
+    <color name="gray_light">#EAEDF0</color>
+    <color name="gray_1">#97A9B5</color>
+    <color name="gray_2">#808D9A</color>
+    <color name="gray_3">#AAAAAA</color>
+    <color name="gray_4">#929292</color>
+    <color name="gray_dark">#4D616E</color>
+    <color name="transparent">#00000000</color>
+    <color name="keyboard_button_background">#ECF1F4</color>
+    <color name="keyboard_button_clicked_background">#80C6F0</color>
+    <color name="red">#D30B0B</color>
+    <color name="pager_indicator">#BBBBBB</color>
+    <color name="pager_selected_indicator">#004F85</color>
+    <color name="green">#08AA08</color>
+    <color name="line_sparator">#EAE7E7</color>
+    <color name="tab_layout_selected">#4487CB</color>
 </resources>

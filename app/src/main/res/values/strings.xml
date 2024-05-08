@@ -1,3 +1,62 @@
 <resources>
-    <string name="app_name">Mini-Bank</string>
+    <string name="app_name">Application Mini Bank</string>
+    <string name="welcome">Bienvenue</string>
+    <string name="welcome_description">sur fawri digital banking\nApp</string>
+    <string name="client_id">Identifiant client</string>
+    <string name="password">Mot de passe</string>
+    <string name="login">Connexion</string>
+    <string name="forgot_password_question">Mot de passe oublié ?</string>
+    <string name="my_accounts">Mes comptes</string>
+    <string name="my_cards">Mes cartes</string>
+    <string name="my_checks">Mes chèques</string>
+    <string name="my_beneficiaries">Mes bénéficiaires</string>
+    <string name="transfer">Virment</string>
+    <string name="billing">Paiement de facture</string>
+    <string name="my_samples">Mes prélèvement</string>
+    <string name="rib_edition">Édition RIB</string>
+    <string name="currentLanguage">Français</string>
+    <string name="logout">Se déconnecter</string>
+    <string name="account_number_2points">N° DE COMPTE :</string>
+    <string name="balance_2points">Solde :</string>
+    <string name="blocking">Blocage</string>
+    <string name="opposition">Opposition</string>
+    <string name="card_balance">Solde sur carte</string>
+    <string name="currency">MAD</string>
+    <string name="my_operations">Mes Opérations</string>
+    <string name="history">Historique</string>
+    <string name="statistic">Statistiques</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="today">Aujourd\'hui</string>
+    <string name="credit">Crédit</string>
+    <string name="debit">Débit</string>
+    <string name="accounts">Comptes</string>
+    <string name="cards">Cartes</string>
+    <string name="payment">Paiement</string>
+    <string name="opinion">Avis</string>
+    <string name="mes_virements">Mes Virements</string>
+    <string name="mes_factures">Mes Factures</string>
+    <string name="mon_profil">Mon profil</string>
+    <string name="mon_conseiller">Mon Conseiller</string>
+    <string name="mention_legal">Mention Legal</string>
+    <string name="text_infos">"Veuillez saisir votre identifiant et numéro de téléphone\n       "</string>
+    <string name="text1step2">Veuillez choisir et répondre à la question secrète :</string>
+    <string name="text2step2">Vous n\'avez pas recu le code ?</string>
+    <string name="text3step3">Renvoyer le SMS</string>
+    <string name="txt1step3">Veuillez choisir et répondre à la question secrète</string>
+    <string name="txt2step3">Votre Question secrète</string>
+    <string name="txt1step4">Veuiller définir votre mot de passe</string>
+
+    <string-array name="spinner_statistics">
+        <item>Mois</item>
+        <item>Semaine</item>
+        <item>Année</item>
+    </string-array>
+    <string-array name="operator_array">
+        <item>Operator 1</item>
+        <item>Operator 2</item>
+        <item>Operator 3</item>
+    </string-array>
+
+
 </resources>
