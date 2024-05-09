@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="ui.Step3Fragment">
+    >
 
     <!-- Header -->
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -17,7 +17,7 @@
         android:gravity="center_vertical">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/back_button3"
+            android:id="@+id/back_button4_s4act"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_arrow_back"
@@ -27,7 +27,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mot de passe oublié"
+            android:text="Activation du compte"
             android:textColor="#238EED"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -36,54 +36,41 @@
 
     <!-- Text -->
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/text_view1"
+        android:id="@+id/text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/txt1step3"
-        android:textStyle="bold"
+        android:text="@string/txt1step4"
         android:textSize="18sp"
+        android:textStyle="bold"
         android:layout_below="@id/header_layout"
         android:layout_marginTop="50dp"
-        android:layout_marginStart="@dimen/_20sdp"/>
+        android:layout_marginStart="16dp"/>
 
-    <!-- Text -->
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/text_view2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txt2step3"
-        android:textStyle="bold"
-        android:textSize="14sp"
-        android:layout_below="@id/text_view1"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="@dimen/_20sdp"/>
-
-    <!-- Text -->
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/text_view3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Votre couleur préférée ?"
-        android:textStyle="bold"
-        android:textColor="#00A591"
-        android:textSize="16sp"
-        android:layout_below="@id/text_view2"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="@dimen/_21sdp"/>
-
-    <!-- Answer EditText -->
+    <!-- Password EditText -->
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/answer_edit_text"
+        android:id="@+id/password_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/text_view3"
+        android:layout_below="@id/text_view"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="@dimen/_38sdp"
+        android:layout_marginTop="@dimen/_50sdp"
         android:layout_marginEnd="16dp"
-        android:hint="Réponse secrète"
-        android:inputType="text" />
+        android:hint="mot de passe"
+        android:inputType="textPassword" />
+
+    <!-- Confirm Password EditText -->
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/confirm_password_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password_edit_text"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginEnd="16dp"
+        android:hint="Confirmation mot du passe"
+        android:inputType="textPassword" />
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/next_button3"
+        android:id="@+id/next_button"
         android:layout_width="match_parent"
         android:padding="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_28sdp"

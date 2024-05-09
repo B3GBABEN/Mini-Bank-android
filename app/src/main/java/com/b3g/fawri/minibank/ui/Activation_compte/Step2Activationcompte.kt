@@ -1,4 +1,4 @@
-package com.b3g.fawri.minibank.ui
+package com.b3g.fawri.minibank.ui.Activation_compte
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -13,19 +13,19 @@ import androidx.viewpager2.widget.ViewPager2
 import com.b3g.fawri.minibank.R
 
 
-class Step2Fragment: Fragment() {
+class Step2Activationcompte: Fragment() {
 
     private lateinit var otpEditTexts: List<AppCompatEditText>
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.step2_layout, container, false)
+        val view = inflater.inflate(R.layout.step2_activation, container, false)
         otpEditTexts = listOf(
-            view.findViewById(R.id.otp_edit_text1),
-            view.findViewById(R.id.otp_edit_text2),
-            view.findViewById(R.id.otp_edit_text3),
-            view.findViewById(R.id.otp_edit_text4),
-            view.findViewById(R.id.otp_edit_text5),
-            view.findViewById(R.id.otp_edit_text6)
+            view.findViewById(R.id.otp_edit_text1_s2act),
+            view.findViewById(R.id.otp_edit_text2_s2act),
+            view.findViewById(R.id.otp_edit_text3_s2act),
+            view.findViewById(R.id.otp_edit_text4_s2act),
+            view.findViewById(R.id.otp_edit_text5_s2act),
+            view.findViewById(R.id.otp_edit_text6_s2act)
         )
 
         for (editText in otpEditTexts) {
@@ -52,10 +52,10 @@ class Step2Fragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Récupérer le ViewPager2 de l'activité parente
-        val viewPager = requireActivity().findViewById<ViewPager2>(R.id.viewPager)
+        val viewPager = requireActivity().findViewById<ViewPager2>(R.id.viewPagerActivation)
 
         // Récupérer le bouton "Suivant"
-        val nextButton = view.findViewById<Button>(R.id.next_button2)
+        val nextButton = view.findViewById<Button>(R.id.next_button2_s2act)
 
         // Ajouter un OnClickListener au bouton "Suivant"
         nextButton.setOnClickListener {
@@ -63,7 +63,7 @@ class Step2Fragment: Fragment() {
             viewPager.setCurrentItem(viewPager.currentItem + 1, true)
         }
         // Récupérer le bouton de retour
-        val backButton = view.findViewById<AppCompatImageView>(R.id.back_button2)
+        val backButton = view.findViewById<AppCompatImageView>(R.id.back_button2_s2act)
 
         // Ajouter un OnClickListener au bouton de retour
         backButton.setOnClickListener {

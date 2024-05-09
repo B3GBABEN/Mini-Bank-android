@@ -46,6 +46,8 @@
     <string name="txt1step3">Veuillez choisir et répondre à la question secrète</string>
     <string name="txt2step3">Votre Question secrète</string>
     <string name="txt1step4">Veuiller définir votre mot de passe</string>
+    <string name="txt_activation">Pour redéfinir votre mot de passe,vous porions de rensigner les informations suivantes:</string>
+    <string name="header_Act">Activation du compte\n</string>
 
     <string-array name="spinner_statistics">
         <item>Mois</item>
