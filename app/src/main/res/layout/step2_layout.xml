@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/header_layout"
-        android:layout_marginTop="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_130sdp"
         android:padding="16dp">
 
         <!-- OTP EditTexts -->
@@ -118,7 +118,7 @@
         android:textStyle="bold"
         android:textSize="@dimen/_13ssp"
         android:layout_below="@id/otp_edit_text1"
-        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_marginTop="@dimen/_125sdp"
         android:layout_marginStart="46dp"
         tools:ignore="NotSibling" />
 
@@ -155,5 +155,6 @@
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_500sdp"
-        android:text="Suivant" />
+        android:text="Suivant"
+        android:textStyle="bold"/>
 </RelativeLayout>

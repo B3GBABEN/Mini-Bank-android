@@ -39,7 +39,7 @@
     <string name="mon_profil">Mon profil</string>
     <string name="mon_conseiller">Mon Conseiller</string>
     <string name="mention_legal">Mention Legal</string>
-    <string name="text_infos">"Veuillez saisir votre identifiant et numéro de téléphone\n       "</string>
+    <string name="text_infos">"Pour redéfinir votre mot de passe,vous porions de rensigner les informations suivantes: \n       "</string>
     <string name="text1step2">Veuillez choisir et répondre à la question secrète :</string>
     <string name="text2step2">Vous n\'avez pas recu le code ?</string>
     <string name="text3step3">Renvoyer le SMS</string>
@@ -48,6 +48,7 @@
     <string name="txt1step4">Veuiller définir votre mot de passe</string>
     <string name="txt_activation">Pour redéfinir votre mot de passe,vous porions de rensigner les informations suivantes:</string>
     <string name="header_Act">Activation du compte\n</string>
+    <string name="Virement">Mes Virements</string>
 
     <string-array name="spinner_statistics">
         <item>Mois</item>

@@ -1,18 +1,18 @@
-package com.b3g.fawri.minibank.ui
+package com.b3g.fawri.minibank.ui.Activation_compte
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.b3g.fawri.minibank.R
 
-class Forgetpassword : AppCompatActivity() {
+class Activationcompte : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_password_oublie)
+        setContentView(R.layout.activity_activationpwd)
 
-        val viewPager: ViewPager2 = findViewById(R.id.viewPager)
-        val adapter = ForgetpwdPagerAdapter(this)
+        val viewPager: ViewPager2 = findViewById(R.id.viewPagerActivation)
+        val adapter = ActivationcomptePagerAdapter(this)
         viewPager.adapter = adapter
 
         // Définir la position initiale du ViewPager sur 0 (Step1Fragment)

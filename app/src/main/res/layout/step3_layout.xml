@@ -43,7 +43,7 @@
         android:textStyle="bold"
         android:textSize="18sp"
         android:layout_below="@id/header_layout"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/_95sdp"
         android:layout_marginStart="@dimen/_20sdp"/>
 
     <!-- Text -->
@@ -93,6 +93,7 @@
 
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_500sdp"
+        android:textStyle="bold"
         android:text="Suivant" />
 
 </RelativeLayout>
