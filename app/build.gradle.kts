@@ -44,4 +44,13 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    //SDP - a scalable size unit ->https://github.com/intuit/sdp
+    implementation ("com.intuit.sdp:sdp-android:1.1.0")
+    //SSP - a scalable size unit for texts -> https://github.com/intuit/ssp
+    implementation("com.intuit.ssp:ssp-android:1.1.0")
+
+    //Mockito
+    implementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
+    implementation("androidx.arch.core:core-testing:2.2.0")
+
 }

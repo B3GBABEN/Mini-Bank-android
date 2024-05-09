@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Mini-Bank</string>
+    <string name="app_name">Mini_Bank</string>
+    <string name="identification">Identifient</string>
+    <string name="password">Mot De Passe</string>
+    <string name="forget_password">Mot de passe oublié?</string>
+    <string name="connexion">Connexion</string>
 </resources>
