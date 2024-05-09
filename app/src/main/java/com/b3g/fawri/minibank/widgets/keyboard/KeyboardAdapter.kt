@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import  com.b3g.fawri.minibank.R
 import  com.b3g.fawri.minibank.interfaces.OnItemClickListener
 import  com.b3g.fawri.minibank.widgets.keyboard.CustomKeyboard
-import java.util.*
 import kotlin.collections.ArrayList
 
 class KeyboardAdapter(private val listener: OnItemClickListener<String>) :

@@ -21,7 +21,6 @@ class CustomKeyboard @JvmOverloads constructor(
     enum class KEYBOARD_BUTTON_ACTION {
         CLEAR,
         DELETE_LAST,
-        NUMBER
     }
 
     private var editText: EditText? = null
@@ -35,11 +34,11 @@ class CustomKeyboard @JvmOverloads constructor(
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = GridLayoutManager(context, 3)
         val adapter = KeyboardAdapter(object : OnItemClickListener<String> {
-          override fun onItemClicked(item: String) {
-                when (item) {
+          override fun onItemClicked(data: String) {
+                when (data) {
                     KEYBOARD_BUTTON_ACTION.CLEAR.toString() -> clearAll()
                     KEYBOARD_BUTTON_ACTION.DELETE_LAST.toString() -> deleteLastCharacter()
-                    else -> write(item)
+                    else -> write(data)
                 }
             }
         })
