@@ -14,23 +14,19 @@ class Activityvirement : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_virement)
 
-        // Initialize ViewPager
-        val viewPager = findViewById<ViewPager>(R.id.view_pager)
-        viewPager.adapter = VirementPagerAdapter(supportFragmentManager)
 
-        // Initialize TabLayout
-        val tabLayout = findViewById<TabLayout>(R.id.tab_layout)
-        tabLayout.setupWithViewPager(viewPager)
+        // Initialize Buttons
+        val buttonVirement = findViewById<Button>(R.id.button_virement)
+        val buttonHistorique = findViewById<Button>(R.id.button_historique)
 
         // Set onClickListener for Virement button
         buttonVirement.setOnClickListener {
-            viewPager.currentItem = 0 // Affiche l'étape 1 du virement
+            // Implement logic for Virement button
         }
 
         // Set onClickListener for Historique button
         buttonHistorique.setOnClickListener {
-            // Implémentez la logique pour le bouton Historique
+
         }
     }
-
 }
