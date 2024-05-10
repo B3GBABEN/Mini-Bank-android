@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="ui.Step2Fragment">
+
+    <!-- Header -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EDFAFE"
+        android:orientation="horizontal"
+        android:padding="23dp"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/back_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#238EED"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mot de passe oublié"
+            android:textColor="#238EED"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- OTP Input Fields -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/header_layout"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:padding="16dp">
+
+        <!-- OTP EditTexts -->
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/otp_edit_text1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center" />
+<Space
+    android:layout_width="@dimen/_4sdp"
+    android:layout_height="match_parent"/>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/otp_edit_text2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center" />
+        <Space
+            android:layout_width="@dimen/_4sdp"
+            android:layout_height="match_parent"/>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/otp_edit_text3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center" />
+        <Space
+            android:layout_width="@dimen/_4sdp"
+            android:layout_height="match_parent"/>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/otp_edit_text4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center" />
+        <Space
+            android:layout_width="@dimen/_4sdp"
+            android:layout_height="match_parent"/>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/otp_edit_text5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center" />
+        <Space
+            android:layout_width="@dimen/_4sdp"
+            android:layout_height="match_parent"/>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/otp_edit_text6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text1step2"
+        android:textStyle="bold"
+        android:textSize="@dimen/_13ssp"
+        android:layout_below="@id/otp_edit_text1"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_marginStart="46dp"
+        tools:ignore="NotSibling" />
+
+    <!-- Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text2step2"
+        android:textStyle="bold"
+        android:textSize="@dimen/_13ssp"
+        android:layout_below="@id/text_view1"
+        android:layout_marginTop="160dp"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="105dp"/>
+    <!-- Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_view3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text3step3"
+        android:textStyle="bold"
+        android:textColor="#00A591"
+        android:layout_below="@id/text_view1"
+        android:layout_marginTop="190dp"
+        android:layout_marginStart="@dimen/_123sdp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_button2"
+        android:layout_width="match_parent"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_28sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_blue_theme"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_500sdp"
+        android:text="Suivant" />
+</RelativeLayout>

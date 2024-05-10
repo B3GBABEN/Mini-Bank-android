@@ -14,7 +14,7 @@
         android:theme="@style/Theme.MiniBank"
         tools:targetApi="31">
         <activity
-            android:name=".activities.LoginActivity"
+            android:name=".ui.Forgetpassword"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

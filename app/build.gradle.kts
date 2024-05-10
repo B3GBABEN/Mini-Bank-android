@@ -52,5 +52,7 @@ dependencies {
     //Mockito
     implementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
     implementation("androidx.arch.core:core-testing:2.2.0")
+//
+    implementation ("androidx.viewpager2:viewpager2:1.0.0")
 
 }

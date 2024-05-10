@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EDFAFE"
+        android:orientation="horizontal"
+        android:padding="23dp"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/back_button_act"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#238EED"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/header_Act"
+            android:textColor="#238EED"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/indicator_layout_act"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/circle_blue"
+        android:layout_below="@id/header_layout"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_70sdp">
+
+        <!-- Indicateurs d'étape (cercles) -->
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/indicator_layout_act"
+        android:background="@color/background"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/step_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/indicator_layout_act"
+        android:layout_marginTop="16dp"
+        android:text="@string/txt_activation"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/identifiant_edit_text_act"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/step_text_view"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Identifiant"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:inputType="text" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/telephone_edit_text_act"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/identifiant_edit_text_act"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Numéro de téléphone"
+        android:inputType="phone" />
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/operator_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/telephone_edit_text_act"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_38sdp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#238EED"
+        android:entries="@array/operator_list" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_button_st1act"
+        android:layout_width="match_parent"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_28sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_blue_theme"
+        android:textColor="@color/white"
+        android:layout_below="@id/telephone_edit_text_act"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="210dp"
+        android:text="Suivant" />
+
+    <LinearLayout
+        android:id="@+id/otp_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/telephone_edit_text_act"
+        android:visibility="gone">
+
+        <!-- Ajoutez ici les éléments pour la saisie de l'OTP, par exemple un EditText -->
+
+    </LinearLayout>
+
+</RelativeLayout>
