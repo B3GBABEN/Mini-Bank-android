@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:hint="@string/identification"
+        android:layout_height="@dimen/_35sdp"
+        android:textColorHint="@color/gray_2"
+        android:clickable="false"
+        android:focusable="false"
+        android:background="@color/transparent"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="number"
+        android:padding="@dimen/_10sdp"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

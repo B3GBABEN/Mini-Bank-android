@@ -6,11 +6,12 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.b3g.fawri.minibank.R
+import com.b3g.fawri.minibank.widgets.CustomedEditText
 import com.b3g.fawri.minibank.widgets.keyboard.CustomKeyboard
 
 class LoginActivity : AppCompatActivity() {
-    private lateinit var uiClientId: EditText
-    private lateinit var uiPassword: EditText
+    private lateinit var uiClientId: CustomedEditText
+    private lateinit var uiPassword: CustomedEditText
     private lateinit var uiKeyboardView: CustomKeyboard
     private lateinit var uiConnexion: Button
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,17 +36,20 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setupViewsActions() {
-        noFocusableEditTextClickAction(uiClientId)
-        noFocusableEditTextClickAction(uiPassword)
+        customEditTextClickAction(uiClientId)
+        customEditTextClickAction(uiPassword)
         uiConnexion.setOnClickListener { connexion(it) }
     }
 
-    private fun noFocusableEditTextClickAction(field: EditText) {
+    private fun customEditTextClickAction(field: CustomedEditText) {
         field.setOnClickListener {
             clearSelection()
             field.isSelected = true
-            uiKeyboardView.setEditText(field)
+            uiKeyboardView.setEditText(field.getEditText())
             uiKeyboardView.visibility = View.VISIBLE
+            field.getEditText().requestFocus()
+
+
         }
 
     }

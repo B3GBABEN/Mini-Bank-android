@@ -1,26 +1,24 @@
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import  com.b3g.fawri.minibank.R
-import  com.b3g.fawri.minibank.interfaces.OnItemClickListener
-import  com.b3g.fawri.minibank.widgets.keyboard.CustomKeyboard
-import kotlin.collections.ArrayList
+import com.b3g.fawri.minibank.R
+import com.b3g.fawri.minibank.interfaces.OnItemClickListener
+import com.b3g.fawri.minibank.widgets.keyboard.CustomKeyboard
 
 class KeyboardAdapter(private val listener: OnItemClickListener<String>) :
     RecyclerView.Adapter<KeyboardAdapter.ViewHolder>() {
 
-    private var numbers: ArrayList<String> = ArrayList()
+    private lateinit var numbers: ArrayList<String>
 
     init {
         randomNumbers()
     }
 
     private fun randomNumbers() {
-        numbers.clear()
+        numbers = ArrayList()
         for (i in 0 until 10) {
             numbers.add(i.toString())
         }
@@ -28,8 +26,7 @@ class KeyboardAdapter(private val listener: OnItemClickListener<String>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.keyboard_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.keyboard_item, parent, false)
         return ViewHolder(view)
     }
 
@@ -49,17 +46,15 @@ class KeyboardAdapter(private val listener: OnItemClickListener<String>) :
             }
             else -> {
                 if (numbers.isNotEmpty()) {
-                    value = numbers[0]
-                    numbers.removeAt(0)
+                    value = numbers.removeAt(0)
                 }
                 holder.updateVisibility(true)
                 holder.uiText.text = value
             }
         }
 
-        val fValue = value
         holder.itemView.setOnClickListener {
-            listener.onItemClicked(fValue)
+            listener.onItemClicked(value)
         }
     }
 
@@ -73,7 +68,7 @@ class KeyboardAdapter(private val listener: OnItemClickListener<String>) :
 
         init {
             uiText.text = ""
-            uiImage.setImageResource(R.color.transparent)
+            uiImage.setImageResource(android.R.color.transparent)
         }
 
         fun updateVisibility(isText: Boolean) {
