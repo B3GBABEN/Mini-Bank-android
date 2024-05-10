@@ -9,7 +9,8 @@ class VirementPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
         return when (position) {
             0 -> Step1FragmentVirement()
             1 -> Step2FragmentVirement()
-            // Ajoutez d'autres étapes du virement ici
+            2 -> Step3FragmentVirement()
+            3 -> Step4FragmentVirement()
             else -> Fragment()
         }
     }
