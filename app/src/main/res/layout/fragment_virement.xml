@@ -4,22 +4,12 @@
     android:layout_height="match_parent"
     android:background="@android:color/white">
 
-    <!-- TabLayout pour la barre de choix -->
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_layout"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="?attr/colorPrimary"
-        android:elevation="6dp"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
-
-    <!-- ViewPager pour les étapes du virement -->
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/tab_layout" />
+        android:text="Fragment Virement"
+        android:textSize="18sp"
+        android:layout_centerInParent="true" />
 
 </RelativeLayout>
+

@@ -49,6 +49,7 @@
     <string name="txt_activation">Pour redéfinir votre mot de passe,vous porions de rensigner les informations suivantes:</string>
     <string name="header_Act">Activation du compte\n</string>
     <string name="Virement">Mes Virements</string>
+    <string name="Historique">Historique</string>
 
     <string-array name="spinner_statistics">
         <item>Mois</item>
