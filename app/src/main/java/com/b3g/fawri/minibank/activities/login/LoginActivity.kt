@@ -1,9 +1,8 @@
-package com.b3g.fawri.minibank.activities
+package com.b3g.fawri.minibank.activities.login
 
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.b3g.fawri.minibank.R
 import com.b3g.fawri.minibank.widgets.CustomedEditText
