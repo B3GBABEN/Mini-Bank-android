@@ -5,26 +5,21 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class LoginViewModel: ViewModel() {
-private val _userId= MutableLiveData<String>()
-private val _password= MutableLiveData<String>()
+private val _userId = MutableLiveData<String>()
+private val _password = MutableLiveData<String>()
 val userId : LiveData<String> =  _userId
         val password : LiveData<String> =_password
-fun setUserId(userId : String)
+fun setUserId(id : String)
 {
-_userId.value=userId
+  _userId.value=id
 }
-  fun setPassword(password : String)
+  fun setPassword(pass : String)
 {
-_password.value=password
+_password.value=pass
 }
-    fun getUserId() : LiveData<String>
-    {
-        return  _userId
-    }
-    fun getPassword() : LiveData<String>
-    {
-        return  _password
-    }
+
+
+
 
 
 }
