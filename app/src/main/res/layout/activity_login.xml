@@ -65,6 +65,7 @@
             android:textSize="@dimen/_15sdp"
             />
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/forgot_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/green_light"

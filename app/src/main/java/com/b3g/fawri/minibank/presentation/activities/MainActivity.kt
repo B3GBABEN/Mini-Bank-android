@@ -1,4 +1,4 @@
-package com.b3g.fawri.minibank.activities
+package com.b3g.fawri.minibank.presentation.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
