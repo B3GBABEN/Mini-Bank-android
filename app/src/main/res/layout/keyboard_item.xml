@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_20sdp"
+    android:layout_margin="@dimen/_2sdp"
+    android:background="@drawable/button_keyboard"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_2sdp"
+        android:background="@drawable/button_keyboard"
+        android:fontFamily="@font/circular_std_medium"
+        android:gravity="center"
+        android:textColor="@color/gray_dark"
+        android:text="@string/one"
+        android:textSize="@dimen/_16ssp"
+        android:id="@+id/text"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image"
+        android:layout_margin="@dimen/_6sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/icon_clear"
+        android:tint="@color/blue"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="purple_200">#3F3F40</color>
+    <color name="purple_500">#000000</color>
+    <color name="purple_700">#363637</color>
+    <color name="teal_200">#FFFFFF</color>
+    <color name="teal_700">#EDEDED</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="background">#FAFDFF</color>
+    <color name="background">#222222</color>
+    <color name="blue">#149df7</color>
+    <color name="transparent">#00000000</color>
+    <color name="orange">#F9A825</color>
+    <color name="color_accent">#FFFFFF</color>
+    <color name="hint_accent">#83F8F8F8</color>
+    <color name="black_light">#202020</color>
+    <color name="gray">#bfbebb</color>
+    <color name="gray2">#8f909c</color>
+    <color name="blue2">#8bcffc</color>
+    <color name="keyboard_button_clicked">#80C6F0</color>
+    <color name="keyboard_button">#ECF1F4</color>
     <color name="primaryDark1">#36445D</color>
     <color name="primaryDark">#232941</color>
     <color name="primary">#004F85</color>
@@ -12,7 +28,6 @@
     <color name="gray_3">#AAAAAA</color>
     <color name="gray_4">#929292</color>
     <color name="gray_dark">#4D616E</color>
-    <color name="transparent">#00000000</color>
     <color name="keyboard_button_background">#ECF1F4</color>
     <color name="keyboard_button_clicked_background">#80C6F0</color>
     <color name="red">#D30B0B</color>

@@ -47,8 +47,12 @@ dependencies {
     //SDP - a scalable size unit ->https://github.com/intuit/sdp
     implementation ("com.intuit.sdp:sdp-android:1.1.0")
     //SSP - a scalable size unit for texts -> https://github.com/intuit/ssp
-    implementation ("com.intuit.ssp:ssp-android:1.1.0")
-    //
+    implementation("com.intuit.ssp:ssp-android:1.1.0")
+
+    //Mockito
+    implementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
+    implementation("androidx.arch.core:core-testing:2.2.0")
+//
     implementation ("androidx.viewpager2:viewpager2:1.0.0")
 
 }
