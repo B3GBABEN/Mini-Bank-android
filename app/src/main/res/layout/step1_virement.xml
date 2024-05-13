@@ -62,6 +62,7 @@
         android:id="@+id/img_benef"
         android:layout_width="@dimen/_10sdp"
         android:layout_height="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
         android:src="@drawable/ic_add_benef"
         android:tint="#238EED"
         android:backgroundTint="#238EED"/>
