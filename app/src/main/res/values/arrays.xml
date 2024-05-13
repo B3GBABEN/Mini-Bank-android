@@ -11,4 +11,14 @@
         <item>Ville natale</item>
         <item>Date naissance</item>
     </string-array>
+    <string-array name="itemcomptedebiter" >
+    <item>Compte1</item>
+    <item>Compte2</item>
+    <item>Compte3</item>
+</string-array>
+    <string-array name="itembeneficiare" >
+        <item>beneficiare1</item>
+        <item>beneficiare2</item>
+        <item>beneficiare3</item>
+    </string-array>
 </resources>

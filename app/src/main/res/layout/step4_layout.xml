@@ -43,7 +43,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_below="@id/header_layout"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/_95sdp"
         android:layout_marginStart="16dp"/>
 
     <!-- Password EditText -->
@@ -52,6 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_view"
+        android:backgroundTint="#868E96"
         android:layout_marginStart="16dp"
         android:layout_marginTop="@dimen/_50sdp"
         android:layout_marginEnd="16dp"
@@ -65,8 +66,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/password_edit_text"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_42sdp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#868E96"
         android:hint="Confirmation mot du passe"
         android:inputType="textPassword" />
     <androidx.appcompat.widget.AppCompatButton
@@ -77,7 +79,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/button_blue_theme"
         android:textColor="@color/white"
-
+        android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_500sdp"
         android:text="Suivant" />

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="ui.Step3Fragment">
+    tools:context="ui.Virement.Step3FragmentVirement">
 
     <!-- Header -->
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -27,7 +27,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mot de passe oublié"
+            android:text="Mes Virements"
             android:textColor="#238EED"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -36,52 +36,27 @@
 
     <!-- Text -->
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/text_view1"
+        android:id="@+id/text_view1_vir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/txt1step3"
+        android:text="@string/confirmer_virement"
         android:textStyle="bold"
-        android:textSize="18sp"
+        android:textSize="@dimen/_14ssp"
         android:layout_below="@id/header_layout"
         android:layout_marginTop="@dimen/_95sdp"
-        android:layout_marginStart="@dimen/_20sdp"/>
+        android:layout_marginStart="@dimen/_33sdp"/>
 
-    <!-- Text -->
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/text_view2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txt2step3"
-        android:textStyle="bold"
-        android:textSize="14sp"
-        android:layout_below="@id/text_view1"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="@dimen/_20sdp"/>
-
-    <!-- Text -->
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/text_view3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Votre couleur préférée ?"
-        android:textStyle="bold"
-        android:textColor="#00A591"
-        android:textSize="16sp"
-        android:layout_below="@id/text_view2"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="@dimen/_21sdp"/>
 
     <!-- Answer EditText -->
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/answer_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/text_view3"
-        android:backgroundTint="#868E96"
+        android:layout_below="@id/text_view1_vir"
         android:layout_marginStart="16dp"
         android:layout_marginTop="@dimen/_38sdp"
         android:layout_marginEnd="16dp"
-        android:hint="Réponse secrète"
+        android:hint="Mot de passe"
         android:inputType="text" />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/next_button3"
