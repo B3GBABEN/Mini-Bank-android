@@ -53,6 +53,8 @@ dependencies {
     implementation ("com.intuit.sdp:sdp-android:1.1.0")
     //SSP - a scalable size unit for texts -> https://github.com/intuit/ssp
     implementation("com.intuit.ssp:ssp-android:1.1.0")
+//ARIndicatorView is Android library for showing indicators in RecyclerView and ViewPager. -> https://github.com/MartinStamenkovski/ARIndicatorView
+    implementation ("com.github.martinstamenkovski:ARIndicatorView:2.0.0")
 
     //Mockito
     implementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
