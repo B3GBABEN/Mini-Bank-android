@@ -5,11 +5,9 @@
     <string name="forget_password">Mot de passe oublié?</string>
     <string name="connexion">Connexion</string>
     <string name="one">1</string>
-    <string name="app_name">Application Mini Bank</string>
     <string name="welcome">Bienvenue</string>
     <string name="welcome_description">sur fawri digital banking\nApp</string>
     <string name="client_id">Identifiant client</string>
-    <string name="password">Mot de passe</string>
     <string name="login">Connexion</string>
     <string name="forgot_password_question">Mot de passe oublié ?</string>
     <string name="my_accounts">Mes comptes</string>

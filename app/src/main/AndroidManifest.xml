@@ -20,7 +20,7 @@
 =======
 >>>>>>> 468901c30d0348e3fc83be1b3d84a0eb262e4dde
         <activity
-            android:name=".ui.Forgetpassword"
+            android:name=".presentation.activities.login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -18,13 +18,14 @@
     <color name="gray2">#8f909c</color>
     <color name="blue2">#8bcffc</color>
     <color name="keyboard_button_clicked">#80C6F0</color>
-    <color name="keyboard_button">#ECF1F4</color>
+    <color name="keyboard_button">#dce9fa</color>
     <color name="primaryDark1">#36445D</color>
     <color name="primaryDark">#232941</color>
     <color name="primary">#004F85</color>
     <color name="gray_light">#EAEDF0</color>
     <color name="gray_1">#97A9B5</color>
     <color name="gray_2">#808D9A</color>
+    <color name="green_light">#218a6d</color>
     <color name="gray_3">#AAAAAA</color>
     <color name="gray_4">#929292</color>
     <color name="gray_dark">#4D616E</color>
