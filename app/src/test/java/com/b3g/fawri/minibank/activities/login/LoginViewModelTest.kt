@@ -9,10 +9,14 @@ import com.b3g.fawri.minibank.core.bases.errors.DataError
 import com.b3g.fawri.minibank.data.validation.remote.moels.LoginOutputDto
 import com.b3g.fawri.minibank.domain.models.Login
 import com.b3g.fawri.minibank.domain.repositories.LoginRepository
+import com.b3g.fawri.minibank.domain.usecases.LoginUseCase
 import com.b3g.fawri.minibank.presentation.activities.login.LoginViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runTest
+import kotlinx.coroutines.test.setMain
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Rule
@@ -24,11 +28,9 @@ import java.io.IOException
 @RunWith(MockitoJUnitRunner::class)
 
 class LoginViewModelTest {
-
     @get:Rule
     val instantTaskExecutorRule = InstantTaskExecutorRule()
-    val USERID: String = "userid"
-     val PASSWORD: String = "password"
+
     lateinit var sut : LoginViewModel
     private lateinit var loginRepository: MockLoginRepository
     companion object {
@@ -38,11 +40,14 @@ class LoginViewModelTest {
         const val DELAY=200L
     }
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @Before
 fun setUp()
-{    loginRepository = MockLoginRepository()
+{
+    Dispatchers.setMain(Dispatchers.Unconfined)
+    loginRepository = MockLoginRepository()
 
-    sut= LoginViewModel(loginRepository)
+    sut= LoginViewModel(LoginUseCase(loginRepository))
 
 }
  @Test
@@ -68,9 +73,11 @@ Assert.assertEquals(PASSWORD,sut.password.value)
     fun loginWithValidData() = runBlocking {
         loginSucceded()
         val loading = sut.state.value
+        println("Loading state: $loading")
         Assert.assertTrue(loading.isLoading)
         delay(DELAY + 100)
         val result = sut.state.value
+        println("Result state: $result")
         Assert.assertTrue(result.isSuccess)
     }
     @Test
@@ -84,7 +91,7 @@ Assert.assertEquals(PASSWORD,sut.password.value)
         Assert.assertTrue(loading.isLoading)
         delay(DELAY + 100)
         val result = sut.state.value
-        println("Actual error: ${result.error}") // Add this line for logging
+        println("Actual error: ${result.error}")
 
         Assert.assertNotNull(result.error)
         Assert.assertEquals(result.error, DataError.Network.AUTH_FAILED)
