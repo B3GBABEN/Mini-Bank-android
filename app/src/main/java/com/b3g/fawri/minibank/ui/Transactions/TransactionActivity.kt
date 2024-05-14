@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.b3g.fawri.minibank.R
 import com.b3g.fawri.minibank.api.models.Transaction
 
-class TransactionsActivity : AppCompatActivity() {
+class TransactionActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
 
@@ -28,6 +28,14 @@ class TransactionsActivity : AppCompatActivity() {
     }
 
     private fun getTransactions(): List<Transaction> {
-        // Implémentez cette méthode pour obtenir la liste des transactions
+        // Pour l'exemple, on génère des transactions statiques
+        return listOf(
+            Transaction(date = "2023-05-01", amount = 100.0, description = "Transaction 1"),
+            Transaction(date = "2023-05-01", amount = 150.0, description = "Transaction 2"),
+            Transaction(date = "2023-05-02", amount = 200.0, description = "Transaction 3"),
+            Transaction(date = "2023-05-03", amount = 50.0, description = "Transaction 4"),
+            Transaction(date = "2023-05-02", amount = 300.0, description = "Transaction 5"),
+            Transaction(date = "2023-05-01", amount = 75.0, description = "Transaction 6"),
+        )
     }
 }
