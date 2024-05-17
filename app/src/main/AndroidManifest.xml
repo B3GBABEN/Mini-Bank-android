@@ -17,6 +17,7 @@
 
         <activity android:name=".ui.Activation_compte.Activationcompte" />
         <activity android:name=".ui.Virement.Activityvirement" />
+        <activity android:name=".ui.Transactions.TransactionActivity" />
 =======
 >>>>>>> 468901c30d0348e3fc83be1b3d84a0eb262e4dde
         <activity

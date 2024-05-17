@@ -28,7 +28,7 @@ class TransactionActivity : AppCompatActivity() {
     }
 
     private fun getTransactions(): List<Transaction> {
-        // Pour l'exemple, on génère des transactions statiques
+
         return listOf(
             Transaction(date = "2023-05-01", amount = 100.0, description = "Transaction 1"),
             Transaction(date = "2023-05-01", amount = 150.0, description = "Transaction 2"),
