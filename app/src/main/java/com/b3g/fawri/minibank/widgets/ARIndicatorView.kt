@@ -10,6 +10,7 @@ import androidx.viewpager.widget.ViewPager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import com.arindicatorview.IndicatorView
 
 class ARIndicatorView(context: Context, attrs: AttributeSet? = null, defStyle: Int = 0) : IndicatorView(context, attrs, defStyle) {
 

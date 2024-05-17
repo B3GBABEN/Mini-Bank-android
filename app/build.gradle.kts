@@ -3,6 +3,8 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("com.google.dagger.hilt.android") version "2.51"
     id ("kotlin-kapt")
+    id ("kotlin-android-extensions")
+    id ("kotlin-android")
 }
 
 android {
