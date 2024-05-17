@@ -34,5 +34,8 @@
         app:number_of_indicators="3"
         app:selected_color="@color/pager_selected_indicator"
         tools:ignore="MissingClass" />
+    <include layout="@layout/activity_transaction" />
+
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

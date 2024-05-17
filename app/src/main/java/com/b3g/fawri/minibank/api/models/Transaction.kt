@@ -1,3 +1,3 @@
 package com.b3g.fawri.minibank.api.models
 
-data class Transaction(val date: String, val description: String, val amount: Double)
+data class Transaction(val date: String, val description: String, val amount: Double,val accountId: Int)

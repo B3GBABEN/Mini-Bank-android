@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- transaction_item.xml -->
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#868E96"
+        android:textSize="16sp"
+        android:text="Aujordhui"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="ddddddd"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#00A591"
+        android:layout_marginLeft="@dimen/_220sdp"
+        android:text="500 MAD"
+        android:textSize="14sp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
