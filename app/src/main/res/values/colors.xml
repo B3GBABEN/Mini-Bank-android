@@ -37,4 +37,6 @@
     <color name="green">#08AA08</color>
     <color name="line_sparator">#EAE7E7</color>
     <color name="tab_layout_selected">#4487CB</color>
+    <color name="deconnexion">#e6b5b6</color>
+    <color name="blueItem">#E1FBFE</color>
 </resources>

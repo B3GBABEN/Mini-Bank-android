@@ -7,8 +7,8 @@ import com.b3g.fawri.minibank.ui.Step1Fragment
 import com.b3g.fawri.minibank.ui.Step2Fragment
 import com.b3g.fawri.minibank.ui.Step3Fragment
 import com.b3g.fawri.minibank.ui.Step4Fragment
-import com.b3g.fawri.minibank.ui.Virement.Step1FragmentVirement
-import com.b3g.fawri.minibank.ui.Virement.Step2FragmentVirement
+import com.b3g.fawri.minibank.presentation.screens.Virement.Step1FragmentVirement
+import com.b3g.fawri.minibank.presentation.screens.Virement.Step2FragmentVirement
 
 class ForgetpwdPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
 

@@ -10,7 +10,7 @@ import androidx.appcompat.widget.AppCompatImageView
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.b3g.fawri.minibank.R
-import com.b3g.fawri.minibank.ui.Virement.Activityvirement
+import com.b3g.fawri.minibank.presentation.screens.Virement.Activityvirement
 
 class Step4Fragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

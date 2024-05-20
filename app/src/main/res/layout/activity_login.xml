@@ -1,81 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_margin="@dimen/_9sdp">
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/burger_menu"/>
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:layout_gravity="center_horizontal"
-        android:orientation="vertical">
-        <androidx.appcompat.widget.AppCompatImageView
+    tools:context=".presentation.screens.login.LoginActivity"
+>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/logo_mini_bank"/>
-        <com.b3g.fawri.minibank.widgets.CustomedEditText
-            android:id="@+id/clientId"
+            android:layout_height="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp"
+            android:layout_margin="@dimen/_9sdp">
+            <ImageButton
+                android:id="@+id/menu"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/transparent"
+                android:src="@drawable/burger_menu"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logo_mini_bank"/>
+                <com.b3g.fawri.minibank.widgets.CustomedEditText
+                    android:id="@+id/clientId"
+                    android:layout_width="match_parent"
+                    app:hint="@string/identification"
+                    android:layout_height="@dimen/_40sdp"
+                    android:textColor="@color/blue"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:background="@color/transparent"
+                    android:fontFamily="sans-serif-medium"
+                    />
+                <include layout="@layout/line_view"/>
+
+                <com.b3g.fawri.minibank.widgets.CustomedEditText
+                    android:id="@+id/password"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    app:hint="@string/password"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_height="@dimen/_40sdp"
+                    android:textColor="@color/gray2"
+                    android:background="@color/transparent"
+                    android:fontFamily="sans-serif-medium"
+                    app:isPassword="true"
+                    />
+                <include layout="@layout/line_view"/>
+                <com.b3g.fawri.minibank.widgets.keyboard.CustomKeyboard
+                    android:id="@+id/keyboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+
+
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_connexion"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_37sdp"
+                    android:text="@string/connexion"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_shape"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:textSize="@dimen/_15sdp"
+                    />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/forgot_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/green_light"
+                    android:background="@color/transparent"
+                    android:text="@string/forget_password"
+                    android:textStyle="bold"
+
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <include layout="@layout/progress_bar"/>
+    </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        >
+        <LinearLayout
             android:layout_width="match_parent"
-            app:hint="@string/identification"
-            android:layout_height="@dimen/_35sdp"
-            android:textColor="@color/gray2"
-            android:focusable="true"
-            android:clickable="true"
-            android:background="@color/transparent"
-            android:fontFamily="sans-serif-medium"
-            />
-        <include layout="@layout/line_view"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/drawer_header"/>
 
-        <com.b3g.fawri.minibank.widgets.CustomedEditText
-            android:id="@+id/password"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:layout_width="match_parent"
-            app:hint="@string/password"
-            android:focusable="true"
-            android:clickable="true"
-            android:layout_height="@dimen/_35sdp"
-            android:textColor="@color/gray2"
-            android:background="@color/transparent"
-            android:fontFamily="sans-serif-medium"
-            app:isPassword="true"
-            />
-        <include layout="@layout/line_view"/>
-        <com.b3g.fawri.minibank.widgets.keyboard.CustomKeyboard
-            android:id="@+id/keyboard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_10sdp"
-
-            />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_connexion"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_37sdp"
-            android:text="@string/connexion"
-            android:textColor="@color/white"
-            android:background="@drawable/button_shape"
-            android:layout_margin="@dimen/_8sdp"
-            android:textSize="@dimen/_15sdp"
-            />
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/forgot_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/green_light"
-            android:background="@color/transparent"
-            android:text="@string/forget_password"
-            android:textStyle="bold"
-
-            />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-</androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/nav_recycler_view"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="@color/white"
+               />
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

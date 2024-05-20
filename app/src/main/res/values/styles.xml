@@ -45,4 +45,8 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/_8ssp</item>
     </style>
+
+    <style name="NavigationTheme" >
+        <item name="listPreferredItemHeightSmall">40dp</item>
+    </style>
 </resources>
