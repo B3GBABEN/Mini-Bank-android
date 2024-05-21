@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="ui.Virement.Step3FragmentVirement">
+    tools:context=".presentation.screens.Virement.Step3FragmentVirement">
 
     <!-- Header -->
     <androidx.appcompat.widget.LinearLayoutCompat

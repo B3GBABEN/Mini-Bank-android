@@ -18,10 +18,12 @@ abstract class BaseActivities : AppCompatActivity() {
         super.onResume()
         context = this
     }
-    fun startLoading() {
-        findViewById<ViewGroup>(R.id.loader)?.visibility = View.VISIBLE
+    fun startLoading(activity: Activity) {
+        activity.findViewById<ViewGroup>(R.id.loader)?.visibility = View.VISIBLE
     }
-    fun stopLoading() {
-        findViewById<ViewGroup>(R.id.loader)?.visibility = View.GONE
+    fun stopLoading(activity: Activity) {
+        activity.findViewById<ViewGroup>(R.id.loader)?.visibility = View.GONE
     }
+
+
 }

@@ -5,7 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.b3g.fawri.minibank.R
-import com.b3g.fawri.minibank.interfaces.OnItemClickListener
+import com.b3g.fawri.minibank.callbacks.OnItemClickListener
 import com.b3g.fawri.minibank.widgets.keyboard.CustomKeyboard
 
 class KeyboardAdapter(private val listener: OnItemClickListener<String>) :

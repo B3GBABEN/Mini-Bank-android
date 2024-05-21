@@ -1,7 +1,7 @@
 package com.b3g.fawri.minibank.data.validation
 
-import com.b3g.fawri.minibank.core.bases.errors.RequestResult
-import com.b3g.fawri.minibank.core.bases.errors.RootError
+import com.b3g.fawri.minibank.core.utils.errors.RequestResult
+import com.b3g.fawri.minibank.core.utils.errors.RootError
 import com.baben.apps.appformation3.data.validation.cases.PasswordValidation
 import com.baben.apps.appformation3.data.validation.cases.UsernameValidation
 

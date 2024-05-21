@@ -1,7 +1,8 @@
 package com.b3g.fawri.minibank.domain.usecases
 
-import com.b3g.fawri.minibank.core.bases.errors.DataError
-import com.b3g.fawri.minibank.core.bases.errors.Resource
+import com.b3g.fawri.minibank.core.utils.errors.DataError
+import com.b3g.fawri.minibank.core.utils.errors.RequestResult
+import com.b3g.fawri.minibank.core.utils.errors.Resource
 import com.b3g.fawri.minibank.domain.models.Login
 import com.b3g.fawri.minibank.domain.repositories.LoginRepository
 import kotlinx.coroutines.flow.Flow
@@ -18,11 +19,15 @@ class LoginUseCase @Inject constructor(
             emit(Resource.Loading())
             val model = Login(userId = userId, password = password)
             val result = repository.login(model)
-            if (result.token != null) {
-                emit(Resource.Success(result.token.toString()))
-            } else {
+            when (result) {
+                is RequestResult.Success->{
+                    emit(Resource.Success(result.data))
+                }
+            is
+            RequestResult.Error->{
                 emit(Resource.Error(DataError.Network.AUTH_FAILED))
             }
+                }
         } catch (e: HttpException) {
             when (e.code()) {
                 401 -> emit(Resource.Error(DataError.Network.FORBIDEN))

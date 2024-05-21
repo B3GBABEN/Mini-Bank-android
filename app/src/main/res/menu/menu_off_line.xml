@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/activation"
+        android:title="@string/acivation"
+        android:icon="@drawable/ic_activate"
+    />
+
+    <item
+        android:id="@+id/langue"
+        android:title="@string/langue_choice"
+        android:icon="@drawable/ic_translate"
+      />
+
+    <item
+        android:id="@+id/mention_legal"
+        android:title="@string/mention_legal"
+        android:icon="@drawable/ic_cgu"
+       />
+
+    <item
+        android:id="@+id/about"
+        android:title="@string/about"
+        android:icon="@drawable/menu_item_icon"
+       />
+</menu>

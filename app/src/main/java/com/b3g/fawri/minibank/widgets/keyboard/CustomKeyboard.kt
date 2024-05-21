@@ -9,7 +9,7 @@ import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.b3g.fawri.minibank.R
-import com.b3g.fawri.minibank.interfaces.OnItemClickListener
+import com.b3g.fawri.minibank.callbacks.OnItemClickListener
 
 
 class CustomKeyboard: LinearLayoutCompat {

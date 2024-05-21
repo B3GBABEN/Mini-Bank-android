@@ -5,12 +5,14 @@ import com.b3g.fawri.minibank.activities.login.LoginViewModelTest.Companion.DELA
 import com.b3g.fawri.minibank.activities.login.LoginViewModelTest.Companion.PASSWORD
 import com.b3g.fawri.minibank.activities.login.LoginViewModelTest.Companion.TOKEN
 import com.b3g.fawri.minibank.activities.login.LoginViewModelTest.Companion.USERID
-import com.b3g.fawri.minibank.core.bases.errors.DataError
+import com.b3g.fawri.minibank.core.utils.errors.DataError
+import com.b3g.fawri.minibank.core.utils.errors.RequestResult
+import com.b3g.fawri.minibank.core.utils.errors.RootError
 import com.b3g.fawri.minibank.data.validation.remote.moels.LoginOutputDto
 import com.b3g.fawri.minibank.domain.models.Login
 import com.b3g.fawri.minibank.domain.repositories.LoginRepository
 import com.b3g.fawri.minibank.domain.usecases.LoginUseCase
-import com.b3g.fawri.minibank.presentation.activities.login.LoginViewModel
+import com.b3g.fawri.minibank.presentation.screens.login.LoginViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay
@@ -46,32 +48,18 @@ fun setUp()
 {
     Dispatchers.setMain(Dispatchers.Unconfined)
     loginRepository = MockLoginRepository()
-
     sut= LoginViewModel(LoginUseCase(loginRepository))
-
 }
- @Test
-    fun setUserIdTest()
-    {
-        sut.setUserId(USERID)
-Assert.assertEquals(USERID,sut.userId.value)
-    }
-    @Test
-    fun setPasswordTest()
-    {
-        sut.setPassword(PASSWORD)
-Assert.assertEquals(PASSWORD,sut.password.value)
-    }
     @Test
     fun usernameAndPasswordPassedToRepo() = runTest {
-        loginSucceded()
+        sut.login(USERID, PASSWORD)
         Assert.assertNotNull(loginRepository.loginModel)
         Assert.assertEquals(loginRepository.loginModel?.userId, USERID)
         Assert.assertEquals(loginRepository.loginModel?.password, PASSWORD)
     }
     @Test
     fun loginWithValidData() = runBlocking {
-        loginSucceded()
+        sut.login(USERID, PASSWORD)
         val loading = sut.state.value
         println("Loading state: $loading")
         Assert.assertTrue(loading.isLoading)
@@ -84,9 +72,7 @@ Assert.assertEquals(PASSWORD,sut.password.value)
     fun loginWithInvalidData() = runBlocking {
         val userId = "invalidUsername"
         val password = "invalidPassword"
-        sut.setUserId(userId)
-        sut.setPassword(password)
-        sut.login()
+        sut.login(userId,password)
         val loading = sut.state.value
         Assert.assertTrue(loading.isLoading)
         delay(DELAY + 100)
@@ -96,25 +82,29 @@ Assert.assertEquals(PASSWORD,sut.password.value)
         Assert.assertNotNull(result.error)
         Assert.assertEquals(result.error, DataError.Network.AUTH_FAILED)
     }
-    private fun loginSucceded() {
-        sut.setUserId(USERID)
-        sut.setPassword(PASSWORD)
-        sut.login()
+    @Test
+    fun loginWithNoInternet() {
+        loginRepository.noInternet = true
+        sut.login(USERID, PASSWORD)
+        val result = sut.state.value
+        Assert.assertNotNull(result.error)
+        Assert.assertEquals(result.error, DataError.Network.NO_INTERNET)
     }
+
 
 }
 
 class MockLoginRepository : LoginRepository {
     var noInternet: Boolean = false
     var loginModel: Login? = null
-    override suspend fun login(model: Login): LoginOutputDto {
+    override suspend fun login(model: Login): RequestResult<String, RootError> {
         loginModel=model
         if (noInternet) throw IOException()
         delay(DELAY)
         if (model.userId ==USERID  && model.password == PASSWORD) {
-            return LoginOutputDto(token = TOKEN)
+            return RequestResult.Success(TOKEN)
         }
-        return LoginOutputDto()
+        return RequestResult.Error(DataError.Network.AUTH_FAILED)
     }
 
 }

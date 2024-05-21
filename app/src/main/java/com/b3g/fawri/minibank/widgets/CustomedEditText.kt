@@ -73,4 +73,9 @@ class CustomedEditText : LinearLayoutCompat {
     private fun clearViews() {
         editText.setHint("")
     }
+
+    fun getText(): String {
+        return  editText.text.toString()
+
+    }
 }

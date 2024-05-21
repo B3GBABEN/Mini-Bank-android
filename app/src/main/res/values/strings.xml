@@ -55,6 +55,19 @@
     <string name="Virement">Mes Virements</string>
     <string name="Historique">Historique</string>
     <string name="confirmer_virement">Confirmez qu\'il s\'agit bien de vous en introduisant votre mot de passe</string>
+    <string name="Dexonnexion">Déconnexion</string>
+    <string name="about">A propos</string>
+    <string name="langue_choice">Choix de langue</string>
+    <string name="acivation">Activation du compte</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Annuler</string>
+    <string name="error_system">system error !</string>
+    <string name="error_no_internet">mrci de verifier votre connexion internet</string>
+    <string name="error_forbiden">vous etes non autorier</string>
+    <string name="error_server">erreur au niveau de serveur</string>
+    <string name="error_password_empty">Merci de saisire votre mot de passe</string>
+    <string name="error_user_num_empty">Merci de saisire votre mot de numero</string>
+    <string name="error_auth_failed">auth failed</string>
 
     <string-array name="spinner_statistics">
         <item>Mois</item>
