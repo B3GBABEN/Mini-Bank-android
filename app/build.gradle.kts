@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("com.google.dagger.hilt.android") version "2.51"
     id ("kotlin-kapt")
+    id ("kotlin-android-extensions")
     id ("kotlin-android")
     id ("kotlin-parcelize")
 
@@ -39,10 +40,11 @@ android {
         jvmTarget = "1.8"
     }
 
-   // dataBinding.enable=true
-        viewBinding.enable = true
-
-
+    dataBinding.enable = true
+    viewBinding.enable = true
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -68,10 +70,10 @@ dependencies {
     implementation ("androidx.viewpager2:viewpager2:1.0.0")
 
     //Retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.2")
-    implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2")
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.okhttp3:okhttp:5.0.0-alpha.2")
+    implementation ("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
 
     // Coroutines
@@ -88,4 +90,5 @@ dependencies {
     implementation ("androidx.recyclerview:recyclerview:1.3.2")
     //sweet alert dialog
     implementation ("com.github.f0ris.sweetalert:library:1.5.6")
+
 }
