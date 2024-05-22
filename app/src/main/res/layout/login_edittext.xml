@@ -11,11 +11,13 @@
         android:textColorHint="@color/gray_2"
         android:clickable="false"
         android:focusable="false"
-        android:textColor="@color/blue"
+        android:textColor="@color/black"
         android:background="@color/transparent"
         android:fontFamily="sans-serif-medium"
         android:inputType="number"
         android:padding="@dimen/_10sdp"
         />
+
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

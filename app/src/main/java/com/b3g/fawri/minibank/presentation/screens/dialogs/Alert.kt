@@ -2,6 +2,7 @@ package com.b3g.fawri.minibank.presentation.screens.dialogs
 import android.app.AlertDialog
 import android.content.Context
 import android.view.LayoutInflater
+import cn.pedant.SweetAlert.SweetAlertDialog
 import com.b3g.fawri.minibank.R
 import com.b3g.fawri.minibank.databinding.CustomAlertDialogBinding
 object Alert {
@@ -13,30 +14,34 @@ object Alert {
         message: String,
         cancellable: Boolean = true,
         onConfirm: (() -> Unit)? = null,
-        onCancel: (() -> Unit)? = null
+        onCancel: (() -> Unit)? = null,
+        backgroundColor: Int = R.color.keyboard_button_background,
+      //  iconType : Int= SweetAlertDialog.WARNING_TYPE
     ) {
-        val dialogView = LayoutInflater.from(context).inflate(R.layout.custom_alert_dialog, null)
 
         binding = CustomAlertDialogBinding.inflate(LayoutInflater.from(context))
         binding.textTitle.text = title
         binding.textMessage.text = message
 
-        val builder = AlertDialog.Builder(context)
-        builder.setView(dialogView)
-            .setCancelable(cancellable)
-            .setPositiveButton(R.string.ok) { dialog, _ ->
-                dialog.dismiss()
-                onConfirm?.invoke()
-            }
+        val dialog = SweetAlertDialog(context, SweetAlertDialog.WARNING_TYPE)
+        dialog.titleText = title
+        dialog.contentText = message
+        dialog.setCancelable(cancellable)
+        dialog.setConfirmButton(context.getString(R.string.ok)) { sweetAlertDialog ->
+            sweetAlertDialog.dismissWithAnimation()
+            onConfirm?.invoke()
+        }
 
         if (onCancel != null) {
-            builder.setNegativeButton(R.string.cancel) { dialog, _ ->
-                dialog.dismiss()
+            dialog.setCancelButton(context.getString(R.string.cancel)) { sweetAlertDialog ->
+                sweetAlertDialog.dismissWithAnimation()
                 onCancel.invoke()
             }
         }
 
-        val dialog = builder.create()
+
         dialog.show()
+        dialog.window?.setBackgroundDrawableResource(backgroundColor)
+
     }
 }

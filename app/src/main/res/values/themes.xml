@@ -1,11 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.AppFormation2" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.AppMiniBank" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">@color/background</item>
         <item name="android:statusBarColor">@color/background</item>
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
-    <style name="Theme.MiniBank" parent="Base.Theme.AppFormation2" />
+    <style name="Theme.MiniBank" parent="Base.Theme.AppMiniBank" />
 </resources>

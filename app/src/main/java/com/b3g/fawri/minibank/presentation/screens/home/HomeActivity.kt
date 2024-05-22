@@ -1,5 +1,14 @@
 package com.b3g.fawri.minibank.presentation.screens.home
 
-class HomeActivity {
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.b3g.fawri.minibank.R
 
+class HomeActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+    }
 }

@@ -16,7 +16,11 @@ import dagger.hilt.android.AndroidEntryPoint
 import  com.b3g.fawri.minibank.core.bases.BaseActivities
 import com.b3g.fawri.minibank.core.utils.extention.asString
 import com.b3g.fawri.minibank.databinding.ActivityLoginBinding
-import com.b3g.fawri.minibank.presentation.screens.login.LoginViewModel
+import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToAbout
+import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToAccountActivation
+import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToLegalMention
+import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToTransaction
+import com.b3g.fawri.minibank.presentation.popups.Popup.showLanguageSelectionPopup
 import com.b3g.fawri.minibank.presentation.screens.dialogs.Alert
 
 @AndroidEntryPoint
@@ -56,13 +60,13 @@ class LoginActivity : BaseActivities(), NavDrawerAdapter.OnItemClickListener {
             when {
                 state.isLoading -> startLoading(this)
                 state.isSuccess -> {
-                    Navigation.navigateToHome(this@LoginActivity)
+                    navigateToTransaction(this)
                     finish()
                 }
 
                 state.error != null -> {
                     stopLoading(this)
-                    Alert.show(context=this, message = state.error.asString(context))
+                    Alert.show(context=this, message = state.error.asString(context),backgroundColor =R.drawable.edittext_background)
 
                 }
             }
@@ -70,17 +74,17 @@ class LoginActivity : BaseActivities(), NavDrawerAdapter.OnItemClickListener {
     }
 
     private fun clearSelection() {
-        binding.keyboard.visibility = View.GONE
-        binding.clientId.isSelected = false
-        binding.password.isSelected = false
+        binding.loginView.keyboard.visibility = View.GONE
+        binding.loginView.clientId.isSelected = false
+        binding.loginView.password.isSelected = false
     }
 
     private fun setupViewsActions() {
-        customEditTextClickAction(binding.clientId)
-        customEditTextClickAction(binding.password)
-        binding.buttonConnexion.setOnClickListener(this::connexion)
-        binding.forgotButton.setOnClickListener { forgotPassword() }
-        binding.menu.setOnClickListener {         openMenu()}
+        customEditTextClickAction(binding.loginView.clientId)
+        customEditTextClickAction(binding.loginView.password)
+        binding.loginView.buttonConnexion.setOnClickListener(this::connexion)
+        binding.loginView.forgotButton.setOnClickListener { forgotPassword() }
+        binding.loginView.menu.setOnClickListener {         openMenu()}
     }
 
     private fun forgotPassword() {
@@ -91,22 +95,35 @@ class LoginActivity : BaseActivities(), NavDrawerAdapter.OnItemClickListener {
         field.setOnClickListener {
             clearSelection()
             field.isSelected = true
-            binding.keyboard.setEditText(field.getEditText())
-            binding.keyboard.visibility = View.VISIBLE
+            binding.loginView.keyboard.setEditText(field.getEditText())
+            binding.loginView.keyboard.visibility = View.VISIBLE
         }
 
     }
 
 
     private fun connexion(view: View) {
-        val userId = binding.clientId.getText()
-        val password = binding.password.getText()
-
+        val userId = binding.loginView.clientId.getText()
+        val password = binding.loginView.password.getText()
         viewModel.login(userId,password)
+
     }
 
     override fun onItemClick(position: Int) {
-        TODO("Not yet implemented")
-    }
+        when (position) {
+            0 -> {
+                navigateToAccountActivation(this)
+            }
+            1 -> {
+                showLanguageSelectionPopup(this,binding.navRecyclerView)
+            }
+            2 -> {
+                navigateToLegalMention(this)
+            }
+            3 -> {
+                navigateToAbout(this)
+            }
+        }
+        binding.drawerLayout.closeDrawers()    }
 
 }

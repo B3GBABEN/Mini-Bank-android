@@ -18,7 +18,7 @@
     <color name="gray2">#8f909c</color>
     <color name="blue2">#8bcffc</color>
     <color name="keyboard_button_clicked">#80C6F0</color>
-    <color name="keyboard_button">#dce9fa</color>
+    <color name="keyboard_button">#E1FBFE</color>
     <color name="primaryDark1">#36445D</color>
     <color name="primaryDark">#232941</color>
     <color name="primary">#004F85</color>
@@ -39,4 +39,5 @@
     <color name="tab_layout_selected">#4487CB</color>
     <color name="deconnexion">#e6b5b6</color>
     <color name="blueItem">#E1FBFE</color>
+    <color name="selected">#CDEFF3</color>
 </resources>
