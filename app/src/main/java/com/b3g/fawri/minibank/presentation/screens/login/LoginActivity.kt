@@ -18,6 +18,7 @@ import com.b3g.fawri.minibank.core.utils.extention.asString
 import com.b3g.fawri.minibank.databinding.ActivityLoginBinding
 import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToAbout
 import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToAccountActivation
+import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToHome
 import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToLegalMention
 import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToTransaction
 import com.b3g.fawri.minibank.presentation.popups.Popup.showLanguageSelectionPopup
@@ -60,7 +61,7 @@ class LoginActivity : BaseActivities(), NavDrawerAdapter.OnItemClickListener {
             when {
                 state.isLoading -> startLoading(this)
                 state.isSuccess -> {
-                    navigateToTransaction(this)
+                    navigateToHome(this)
                     finish()
                 }
 
