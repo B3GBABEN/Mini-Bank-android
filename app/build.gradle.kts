@@ -90,6 +90,8 @@ dependencies {
     implementation ("com.google.android.material:material:1.12.0")
     //sweet alert dialog
     implementation ("com.github.f0ris.sweetalert:library:1.5.6")
+    //roundedImage
+    implementation ("com.makeramen:roundedimageview:2.3.0")
 
 
 }

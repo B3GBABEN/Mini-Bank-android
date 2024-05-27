@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageCard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="@dimen/_20sdp"
+        android:src="@drawable/card_background" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_margin="@dimen/_15sdp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/MiniBankText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="MiniBank"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/numAccount"
+            android:layout_marginStart="@dimen/_130sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="**** **** **** 1234"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/currentAccount"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:text="Compte Courant"
+        android:layout_marginTop="@dimen/_97sdp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_118sdp"
+        android:layout_marginEnd="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/solde"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="** ****,** MAD"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/_16sdp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/switchButton"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_135sdp"
+            android:src="@drawable/ic_switch_off" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>
