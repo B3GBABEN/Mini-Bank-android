@@ -1,5 +1,6 @@
 package com.b3g.fawri.minibank.presentation.screens.home
 
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.b3g.fawri.minibank.core.utils.errors.RequestResult
@@ -12,6 +13,7 @@ import com.b3g.fawri.minibank.domain.usecases.GetSponsoringCardsUseCase
 import com.b3g.fawri.minibank.domain.usecases.GetTransactionsUseCase
 import com.b3g.fawri.minibank.presentation.screens.home.transactions.TransactionItem
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
@@ -35,17 +37,22 @@ class HomeViewModel @Inject constructor(
     val state = _state.asStateFlow()
 
     init {
-        fetchAccounts()
-        fetchTransactions()
-        fetchSponsoringCards()
+        viewModelScope.launch {
+            launch {  fetchAccounts() }
+            delay(100)
+            launch {  fetchTransactions() }
+            delay(200)
+            launch {  fetchSponsoringCards() }
+        }
     }
 
-    private fun fetchAccounts() {
+    fun fetchAccounts() {
         viewModelScope.launch {
             when (val result = getAccountsUseCase()) {
                 is RequestResult.Success -> {
-                    val newState = _state.value.copy(accounts = result.data)
-                    _state.value = newState
+                    _state.value = HomeViewModelState()
+                    _state.value = HomeViewModelState(accounts = result.data)
+
                 }
                 is RequestResult.Error -> showErrorWith(result.error)
                 else -> {}
@@ -53,12 +60,12 @@ class HomeViewModel @Inject constructor(
         }
     }
 
-    private fun fetchTransactions() {
+    fun fetchTransactions() {
         viewModelScope.launch {
             when (val result = getTransactionsUseCase()) {
                 is RequestResult.Success -> {
-                    val newState = _state.value.copy(transactions = groupTransactionsByDate(result.data))
-                    _state.value = newState
+                    _state.value = HomeViewModelState()
+                    _state.value = HomeViewModelState(transactions = groupTransactionsByDate(result.data))
                 }
                 is RequestResult.Error -> showErrorWith(result.error)
                 else -> {}
@@ -66,15 +73,14 @@ class HomeViewModel @Inject constructor(
         }
     }
 
-    private fun fetchSponsoringCards() {
+    fun fetchSponsoringCards() {
         viewModelScope.launch {
             when (val result = getSponsoringCardsUseCase()) {
                 is RequestResult.Success -> {
-                    val newState = _state.value.copy(sponsoringCards = result.data)
-                    _state.value = newState
+                    _state.value = HomeViewModelState()
+                    _state.value = HomeViewModelState(sponsoringCards = result.data)
                 }
                 is RequestResult.Error -> showErrorWith(result.error)
-                else -> {}
             }
         }
     }

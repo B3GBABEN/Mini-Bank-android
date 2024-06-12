@@ -13,6 +13,7 @@ import com.b3g.fawri.minibank.databinding.ActivityHomeBinding
 import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToAbout
 import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToAccountActivation
 import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToLegalMention
+import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToLogin
 import com.b3g.fawri.minibank.presentation.navigationDrawer.MenuManager
 import com.b3g.fawri.minibank.presentation.popups.Popup.showLanguageSelectionPopup
 import com.b3g.fawri.minibank.presentation.screens.dialogs.Alert
@@ -36,6 +37,7 @@ class HomeActivity : BaseActivities(), NavDrawerAdapter.OnItemClickListener {
         setupUI()
         setupTabLayoutDots()
         observeViewModelState()
+        deconnexion()
     }
 
     private fun setupUI() {
@@ -115,5 +117,10 @@ class HomeActivity : BaseActivities(), NavDrawerAdapter.OnItemClickListener {
             }
         }
         binding.drawerLayout.closeDrawers()
+    }
+    private fun deconnexion() {
+       binding.menuFooter.deconnexion.setOnClickListener {
+            navigateToLogin(this)
+        }
     }
 }

@@ -1,14 +1,11 @@
 package com.b3g.fawri.minibank.presentation.screens.login
 
 import NavDrawerAdapter
-import NavDrawerItem
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.b3g.fawri.minibank.R
-import com.b3g.fawri.minibank.presentation.navigation.Navigation
 import com.b3g.fawri.minibank.widgets.CustomedEditText
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -20,7 +17,6 @@ import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToAbout
 import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToAccountActivation
 import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToHome
 import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToLegalMention
-import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToTransaction
 import com.b3g.fawri.minibank.presentation.navigationDrawer.MenuManager
 import com.b3g.fawri.minibank.presentation.popups.Popup.showLanguageSelectionPopup
 import com.b3g.fawri.minibank.presentation.screens.dialogs.Alert
@@ -100,7 +96,6 @@ class LoginActivity : BaseActivities(), NavDrawerAdapter.OnItemClickListener {
         val userId = binding.loginView.clientId.getText()
         val password = binding.loginView.password.getText()
         viewModel.login(userId,password)
-
     }
 
     override fun onItemClick(position: Int) {
