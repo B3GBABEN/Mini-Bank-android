@@ -15,7 +15,7 @@ class LoginRepositoryImpl @Inject constructor(private val api: ClientApi) : Logi
  private val token = "123"
     override suspend fun login(model: Login): RequestResult<String, RootError> {
     delay(2000L)
-        if (model.userId == "1234" && model.password == "1234")
+        if (model.userId == "1" && model.password == "1")
         {
            // val response = api.login(model)
             return RequestResult.Success(token)

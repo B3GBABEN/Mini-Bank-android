@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/_280sdp"
-    android:layout_height="@dimen/_35sdp"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_30sdp"
     android:gravity="center_vertical"
     android:orientation="horizontal"
     android:background="@drawable/menu_footer_background"
     android:layout_gravity="bottom"
     android:layout_margin="@dimen/_15sdp"
     >
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/_30sdp"
-        android:src="@drawable/ic_logout_menu"
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:background="@drawable/ic_logout_menu"
+        android:clickable="true"
+        android:id="@+id/deconnexion"
+        android:layout_gravity="center"
 />
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/_30sdp"
+        android:layout_height="wrap_content"
         android:text="@string/Dexonnexion"
         android:textSize="@dimen/_16sdp"
         android:textColor="@color/white"
         android:textStyle="bold"
+        android:layout_gravity="center"
+
         />
 </androidx.appcompat.widget.LinearLayoutCompat>

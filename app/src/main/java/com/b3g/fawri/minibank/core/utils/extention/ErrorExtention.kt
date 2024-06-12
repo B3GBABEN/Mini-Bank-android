@@ -15,7 +15,11 @@ fun RootError.asString(context: Context):String
         DataError.Network.AUTH_FAILED ->  context.getString(R.string.error_auth_failed)
         DataError.Network.FORBIDEN ->  context.getString(R.string.error_forbiden)
         DataError.Network.SERVER_ERROR ->  context.getString(R.string.error_server)
+       DataError.Network.ACCOUNT_ERROR->context.getString(R.string.account_error)
+       DataError.Network.TRANSACTION_ERROR->context.getString(R.string.transaction_error)
+       DataError.Network.SPONSOR_ERROR->context.getString(R.string.sponsor_error)
         ValidationError.PasswordError.EMPTY ->  context.getString(R.string.error_password_empty)
         ValidationError.UserIdError.EMPTY ->  context.getString(R.string.error_user_num_empty)
+
     }
 }

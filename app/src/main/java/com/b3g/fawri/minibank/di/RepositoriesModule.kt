@@ -1,7 +1,9 @@
 package com.b3g.fawri.minibank.di
 
+import com.b3g.fawri.minibank.data.repositories.HomeRepositoryImpl
 import com.b3g.fawri.minibank.data.repositories.LoginRepositoryImpl
 import com.b3g.fawri.minibank.data.validation.remote.moels.retrofit.ClientApi
+import com.b3g.fawri.minibank.domain.repositories.HomeRepository
 import com.b3g.fawri.minibank.domain.repositories.LoginRepository
 import dagger.Module
 import dagger.Provides
@@ -18,4 +20,12 @@ object RepositoriesModule {
     {
         return LoginRepositoryImpl(clientApi)
     }
+
+    @Provides
+    @Singleton
+    fun provideHomeRepository(clientApi : ClientApi) : HomeRepository
+    {
+        return HomeRepositoryImpl(clientApi)
+    }
+
 }

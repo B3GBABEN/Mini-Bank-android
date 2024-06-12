@@ -12,9 +12,9 @@
         />
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/logoHeaderHome"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_30sdp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_40sdp"
         android:src="@drawable/logo_mini_bank"
-        android:layout_marginStart="@dimen/_100sdp"
+        android:layout_marginStart="@dimen/_80sdp"
         />
 </androidx.appcompat.widget.LinearLayoutCompat>

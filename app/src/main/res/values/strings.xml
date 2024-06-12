@@ -68,6 +68,9 @@
     <string name="error_password_empty">Merci de saisire votre mot de passe</string>
     <string name="error_user_num_empty">Merci de saisire votre numero</string>
     <string name="error_auth_failed">auth failed</string>
+    <string name="account_error">Erreur de récupération des comptes</string>
+    <string name="transaction_error">Erreur de récupération des transactions</string>
+    <string name="sponsor_error">Erreur de récupération des publicités</string>
 
     <string-array name="spinner_statistics">
         <item>Mois</item>

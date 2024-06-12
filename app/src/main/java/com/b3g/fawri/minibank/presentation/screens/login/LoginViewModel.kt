@@ -23,7 +23,8 @@ class LoginViewModel @Inject constructor (
         val isSuccess: Boolean = false,
         val error: RootError? = null
     )
-    private val _state = MutableStateFlow(LoginViewModelState())
+    private val _state = MutableStateFlow(
+        LoginViewModelState())
     val state = _state.asStateFlow()
 
 
@@ -41,6 +42,8 @@ fun login( userId :String,password : String)
                     is Resource.Success -> {
                         _state.value = LoginViewModelState(isSuccess = true)
                     }
+
+                    else -> {}
                 }
             }.launchIn(viewModelScope)
         }

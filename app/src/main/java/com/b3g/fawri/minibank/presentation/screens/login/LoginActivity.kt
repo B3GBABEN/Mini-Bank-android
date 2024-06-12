@@ -21,11 +21,11 @@ import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToAccou
 import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToHome
 import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToLegalMention
 import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToTransaction
+import com.b3g.fawri.minibank.presentation.navigationDrawer.MenuManager
 import com.b3g.fawri.minibank.presentation.popups.Popup.showLanguageSelectionPopup
 import com.b3g.fawri.minibank.presentation.screens.dialogs.Alert
 
 @AndroidEntryPoint
-
 class LoginActivity : BaseActivities(), NavDrawerAdapter.OnItemClickListener {
     private lateinit var binding: ActivityLoginBinding
     private val viewModel: LoginViewModel by viewModels()
@@ -33,22 +33,15 @@ class LoginActivity : BaseActivities(), NavDrawerAdapter.OnItemClickListener {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.loginView.appHeaderr.logoHeaderHome.visibility = View.GONE
         clearSelection()
         setupViewsActions()
         viewModelStateObserver()
-        setMenuItems()
+        setupMenu()
 
     }
-    private fun setMenuItems() {
-        val drawerItems = listOf(
-            NavDrawerItem(R.drawable.ic_activate, "Activation du compte"),
-            NavDrawerItem(R.drawable.ic_language, "Choix de langue"),
-            NavDrawerItem(R.drawable.ic_bill, "Mention legal"),
-            NavDrawerItem(R.drawable.menu_item_icon, "A propos")
-        )
-
-       binding.navRecyclerView.layoutManager = LinearLayoutManager(this)
-       binding.navRecyclerView.adapter = NavDrawerAdapter(drawerItems, this)
+    private fun setupMenu() {
+        MenuManager.setOfflineMenu(this, binding)
     }
 
     private fun openMenu() {
@@ -85,7 +78,7 @@ class LoginActivity : BaseActivities(), NavDrawerAdapter.OnItemClickListener {
         customEditTextClickAction(binding.loginView.password)
         binding.loginView.buttonConnexion.setOnClickListener(this::connexion)
         binding.loginView.forgotButton.setOnClickListener { forgotPassword() }
-        binding.loginView.menu.setOnClickListener {         openMenu()}
+        binding.loginView.appHeaderr.imgButton.setOnClickListener {         openMenu()}
     }
 
     private fun forgotPassword() {

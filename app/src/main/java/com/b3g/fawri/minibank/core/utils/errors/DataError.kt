@@ -5,7 +5,10 @@ sealed interface DataError: Error {
         NO_INTERNET,
         AUTH_FAILED,
         FORBIDEN,
-        SERVER_ERROR
+        SERVER_ERROR,
+        ACCOUNT_ERROR,
+        SPONSOR_ERROR,
+        TRANSACTION_ERROR
     }
     enum class Local : DataError {
         SYSTEM
