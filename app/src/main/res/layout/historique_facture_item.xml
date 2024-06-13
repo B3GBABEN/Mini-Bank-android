@@ -1,0 +1,62 @@
+<!-- item_historique_facture.xml -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="facture"
+            type="com.b3g.fawri.minibank.data.remote.moels.Facture" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/factureDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{facture.date}"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/factureName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{facture.name}" />
+
+            <TextView
+                android:id="@+id/factureReference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{facture.reference}" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/factureAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{facture.amount}" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/factureStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{facture.status}" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

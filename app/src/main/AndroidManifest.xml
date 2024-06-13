@@ -35,6 +35,9 @@
         <activity
             android:name=".presentation.screens.home.HomeActivity"
             android:exported="false" />
+        <activity android:name=".presentation.screens.factures.FactureActivity"
+            android:exported="false" />
+
 
     </application>
 

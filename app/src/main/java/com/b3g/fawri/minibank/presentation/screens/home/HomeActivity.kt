@@ -12,6 +12,7 @@ import com.b3g.fawri.minibank.core.utils.extention.asString
 import com.b3g.fawri.minibank.databinding.ActivityHomeBinding
 import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToAbout
 import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToAccountActivation
+import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToFactures
 import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToLegalMention
 import com.b3g.fawri.minibank.presentation.navigation.Navigation.navigateToLogin
 import com.b3g.fawri.minibank.presentation.navigationDrawer.MenuManager
@@ -37,7 +38,8 @@ class HomeActivity : BaseActivities(), NavDrawerAdapter.OnItemClickListener {
         setupUI()
         setupTabLayoutDots()
         observeViewModelState()
-        deconnexion()
+        setupMenuFooter()
+        setupBottomNavigation()
     }
 
     private fun setupUI() {
@@ -118,9 +120,38 @@ class HomeActivity : BaseActivities(), NavDrawerAdapter.OnItemClickListener {
         }
         binding.drawerLayout.closeDrawers()
     }
-    private fun deconnexion() {
+    private fun setupBottomNavigation() {
+        binding.bottomNavigation.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_home -> {
+                    // Already on Home screen, do nothing
+                    true
+                }
+
+                R.id.navigation_transfers -> {
+                    // Navigate to Transfers screen
+                    true
+                }
+
+                R.id.navigation_cards -> {
+                    // Navigate to Cards screen
+                    true
+                }
+
+                R.id.navigation_bills -> {
+                    // Navigate to Factures screen
+                    navigateToFactures(this)
+                    true
+                }
+
+                else -> false
+            }
+        }
+    }
+    private fun setupMenuFooter() {
        binding.menuFooter.deconnexion.setOnClickListener {
             navigateToLogin(this)
         }
     }
+
 }

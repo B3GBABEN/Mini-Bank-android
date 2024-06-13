@@ -7,15 +7,12 @@ import com.b3g.fawri.minibank.core.utils.errors.RootError
 import com.b3g.fawri.minibank.data.remote.moels.Account
 import com.b3g.fawri.minibank.data.remote.moels.SponsoringCard
 import com.b3g.fawri.minibank.data.remote.moels.Transaction
-import com.b3g.fawri.minibank.domain.repositories.HomeRepository
 import com.b3g.fawri.minibank.domain.usecases.GetAccountsUseCase
 import com.b3g.fawri.minibank.domain.usecases.GetSponsoringCardsUseCase
 import com.b3g.fawri.minibank.domain.usecases.GetTransactionsUseCase
 import com.b3g.fawri.minibank.presentation.screens.home.HomeViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
 import org.junit.Assert

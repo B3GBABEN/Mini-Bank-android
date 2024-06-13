@@ -71,6 +71,7 @@
     <string name="account_error">Erreur de récupération des comptes</string>
     <string name="transaction_error">Erreur de récupération des transactions</string>
     <string name="sponsor_error">Erreur de récupération des publicités</string>
+    <string name="facture_error">une erreur s\'est produite lors du téléchargement de vos facture, merci de patienter</string>
 
     <string-array name="spinner_statistics">
         <item>Mois</item>

@@ -93,5 +93,13 @@ dependencies {
     //roundedImage
     implementation ("com.makeramen:roundedimageview:2.3.0")
 
+    // ViewModel and LiveData
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.2")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.8.2")
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.8.2")
+
+    // Fragment KTX for viewModels() extension
+    implementation ("androidx.fragment:fragment-ktx:1.8.0")
+
 
 }

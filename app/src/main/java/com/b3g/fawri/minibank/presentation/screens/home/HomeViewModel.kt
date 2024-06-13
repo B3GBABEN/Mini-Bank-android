@@ -28,8 +28,8 @@ class HomeViewModel @Inject constructor(
 
     data class HomeViewModelState(
         val accounts: List<Account>? = null,
-        val transactions: List<TransactionItem>? = null,
         val sponsoringCards: List<SponsoringCard>? = null,
+        val transactions: List<TransactionItem>? = null,
         val error: RootError? = null
     )
 
@@ -39,10 +39,8 @@ class HomeViewModel @Inject constructor(
     init {
         viewModelScope.launch {
             launch {  fetchAccounts() }
-            delay(100)
-            launch {  fetchTransactions() }
-            delay(200)
             launch {  fetchSponsoringCards() }
+            launch {  fetchTransactions() }
         }
     }
 

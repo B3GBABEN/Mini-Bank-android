@@ -8,7 +8,11 @@ sealed interface DataError: Error {
         SERVER_ERROR,
         ACCOUNT_ERROR,
         SPONSOR_ERROR,
-        TRANSACTION_ERROR
+        TRANSACTION_ERROR,
+        FACTURE_ERROR
+
+
+
     }
     enum class Local : DataError {
         SYSTEM
